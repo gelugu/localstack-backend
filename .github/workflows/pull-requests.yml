@@ -1,0 +1,20 @@
+name: push
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Prepare enviroment
+        run: make prepare
+
+      - name: Run tests
+        run: make test
+
+      - name: Build app
+        run: make build

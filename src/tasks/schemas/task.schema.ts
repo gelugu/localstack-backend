@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose"
 import { Document } from "mongoose"
-import { WorkingSegment } from "../classes"
+import { Session } from "../classes"
 
 export type TaskDocument = Task & Document
 
@@ -13,7 +13,7 @@ export class Task {
   description: string
 
   @Prop()
-  workingSegments: WorkingSegment[]
+  sessions: Session[]
 }
 
 export const TaskSchema = SchemaFactory.createForClass(Task)

@@ -1,7 +1,7 @@
-import { WorkingSegment } from "../classes"
+import { Session } from "../classes"
 
 export class UpdateTaskDto {
   name?: string
   description?: string
-  workingSegments?: WorkingSegment[]
+  sessions?: Session[]
 }

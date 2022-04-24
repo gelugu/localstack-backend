@@ -20,6 +20,9 @@ prod:
 db:
 	npm run start:db
 
+test:
+	npm run test:cov
+
 build:
 	npm run build
 
